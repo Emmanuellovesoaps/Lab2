@@ -15,10 +15,13 @@ def calc_median_temperature(num_list):
     length_list = len(sorted_list)
     
     if length_list % 2 == 0:
-        median_number = length_list + 1 / 2
+        median1 = length_list // 2
+        median2 = median1 - 1
+        median_number = (sorted_list[median1] + sorted_list[median2]) / 2
 
     else:
-        median_number = length_list/2
+        median1 = length_list // 2
+        median_number = sorted_list[median1]
 
     return median_number
 
